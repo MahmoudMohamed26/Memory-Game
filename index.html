@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <img src="imgs/logo2.png" class="logo" alt="logo">
+    <div class="main">
+        <button>Play</button>
+        <button>Achievements</button>
+    </div>
+    <div class="achivs">
+        <div class="holder">
+            <div class="achiv">
+                <img src="imgs/unknown.png" class="firstachiv" width="90px" alt="achievement1">
+                <p>Get 10 win streak</p>
+            </div>
+            <div class="achiv">
+                <img src="imgs/unknown.png" class="secondachiv" width="90px" alt="achievement1">
+                <p>Finish one game<br>in 15 seconds</p>
+            </div>
+            <div class="achiv">
+                <img src="imgs/unknown.png" class="thirdachiv" width="90px" alt="achievement1">
+                <p>Finish one game<br>with 4 mistakes or <br>better</p>
+            </div>
+        </div>
+        <button>Back</button>
+    </div>
+    <div class="counting">
+        <h1></h1>
+    </div>
+    <div class="game container">
+        <div class="header">
+            <p class="mistakes">Mistakes : <span>0</span></p>
+            <p class="timer">25</p>
+            <p class="winstreaks">Winstreaks : <span>0</span></p>
+        </div>
+        <div class="boxes">
+            <div class="holder" id="1">
+                <div class="box" data="1">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/cam.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="1" style="order: 3;">
+                <div class="box" data="1">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/cam.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="2">
+                <div class="box" data="2">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/evil.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="2">
+                <div class="box" data="2">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/evil.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="3">
+                <div class="box" data="3">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/minion.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="3">
+                <div class="box" data="3">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/minion.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="4">
+                <div class="box" data="4">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/pumkin.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="4">
+                <div class="box" data="4">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/pumkin.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="5">
+                <div class="box" data="5">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/fish.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="5">
+                <div class="box" data="5">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/fish.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="6">
+                <div class="box" data="6">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/sleep.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="holder" id="6">
+                <div class="box" data="6">
+                    <div class="front">
+                        <img src="imgs/unknown.png" width="100px" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="imgs/sleep.png" width="100px" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lose">
+        <h1>Time Over</h1>
+        <p>Mistakes : <span class="finalmistakes"></span></p>
+        <button class="playagain">Play again</button>
+        <button class="mainbtn">Main Menu</button>
+    </div>
+    <div class="win">
+        <h1>You Win</h1>
+        <p>Current Winstreaks : <span class="finalwinstreaks"></span></p>
+        <p>Mistakes : <span class="finalmistakes"></span></p>
+        <button class="playagain">Play again</button>
+        <button class="mainbtn">Main Menu</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
